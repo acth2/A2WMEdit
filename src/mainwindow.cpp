@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    setWindowTitle("Fadyedit");
+    setWindowTitle("A2WMEdit");
 
     treeView->setMaximumWidth(0);
     treeView->setMinimumWidth(0);
