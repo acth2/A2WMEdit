@@ -57,7 +57,7 @@ private slots:
 
     void closeTab(int index);
 
-    void on_actionAbout_Fadyedit_triggered();
+    void on_actionAbout_A2WMEdit_triggered();
 
     void on_actionOpen_folder_triggered();
 
