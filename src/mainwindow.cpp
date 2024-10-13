@@ -112,7 +112,7 @@ void MainWindow::on_actionSave_as_triggered()
         return;
     }
 
-    setWindowTitle("Fadyedit | " + filePath);
+    setWindowTitle("A2WMEdit | " + filePath);
 
     QTextStream out(&file);
 
@@ -238,8 +238,8 @@ void MainWindow::on_actionAbout_Fadyedit_triggered()
     QString aboutboxStyle = QLatin1String(abouboxFile.readAll());
 
     QMessageBox msgBox;
-    msgBox.setText("<h3>About Fadyedit</h3>");
-    msgBox.setInformativeText("Fadyedit version 0.1 created by Fady's Cube in 2021");
+    msgBox.setText("<h3>About A2WMEdit</h3>");
+    msgBox.setInformativeText("A Fork from Fadyedit version 0.1 created by Fady's Cube in 2021, maintained by AcTh2 in 2024");
     msgBox.setStandardButtons(QMessageBox::Close);
     msgBox.setDefaultButton(QMessageBox::Close);
 
@@ -294,7 +294,7 @@ void MainWindow::openTabFile(QString filePath)
 
     tabsWidget->setTabToolTip(tabsWidget->currentIndex(), filePath);
 
-    setWindowTitle("Fadyedit | " + filePath);
+    setWindowTitle("A2WMEdit | " + filePath);
 
     QTextStream in(&file);
     QString text = in.readAll();
