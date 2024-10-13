@@ -231,7 +231,7 @@ void MainWindow::closeTab(int index)
     }
 }
 
-void MainWindow::on_actionAbout_Fadyedit_triggered()
+void MainWindow::on_actionAbout_A2WMEdit_triggered()
 {
     QFile abouboxFile(":/styles/aboutbox.css");
     abouboxFile.open(QFile::ReadOnly);
