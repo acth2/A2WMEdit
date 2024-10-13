@@ -144,7 +144,7 @@ background-color: rgb(40, 44, 52);</string>
   </action>
   <action name="actionAbout_Fadyedit">
    <property name="text">
-    <string>About Fadyedit</string>
+    <string>About A2WMEdit</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+H</string>
