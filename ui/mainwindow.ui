@@ -58,7 +58,7 @@ background-color: rgb(40, 44, 52);</string>
     <property name="title">
      <string>Help</string>
     </property>
-    <addaction name="actionAbout_Fadyedit"/>
+    <addaction name="actionAbout_A2WMEdit"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -142,7 +142,7 @@ background-color: rgb(40, 44, 52);</string>
     <string>Ctrl+Shift+Z</string>
    </property>
   </action>
-  <action name="actionAbout_Fadyedit">
+  <action name="actionAbout_A2WMEdit">
    <property name="text">
     <string>About A2WMEdit</string>
    </property>
