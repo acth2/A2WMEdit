@@ -50,12 +50,12 @@ MainWindow::MainWindow(QWidget *parent)
     startingTitle->setAlignment(Qt::AlignTop | Qt::AlignLeft);
         
     QLabel *instructionTitle = new QLabel(this);
-    instructionTitle->setText("What should i do to type text ?");
+    instructionTitle->setText("\nWhat should i do to type text ?");
     instructionTitle->setStyleSheet("font: 10pt;");
     instructionTitle->setAlignment(Qt::AlignTop | Qt::AlignLeft);
         
     QLabel *instructionLabel = new QLabel(this);
-    instructionLabel->setText("Start by creating a new file !");
+    instructionLabel->setText("\nStart by creating a new file !");
     instructionLabel->setStyleSheet("font: 15pt;");
     instructionLabel->setAlignment(Qt::AlignTop | Qt::AlignLeft);
         
