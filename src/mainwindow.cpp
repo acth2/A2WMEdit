@@ -44,29 +44,13 @@ MainWindow::MainWindow(QWidget *parent)
     QString menubarStyle = QLatin1String(menubarFile.readAll());
     ui->menubar->setStyleSheet(menubarStyle);
 
-    QLabel *startingTitle = new QLabel(this);
-    startingTitle->setText("A2WM - Edit");
-    startingTitle->setStyleSheet("font: 35pt;");
-    startingTitle->setAlignment(Qt::AlignTop | Qt::AlignLeft);
+    QLabel *startingLabel = new QLabel(this);
+    startingLabel->setText("Hello and welcome into A2WMEdit. If you are new to start texting you can create a new file by selecting the option on the File section !");
+    startingLabel->setStyleSheet("font: 20pt;");
+    startingLabel->setAlignment(Qt::AlignTop | Qt::AlignLeft);
         
-    QLabel *instructionTitle = new QLabel(this);
-    instructionTitle->setText("What should i do to type text ?");
-    instructionTitle->setStyleSheet("font: 10pt;");
-    instructionTitle->setAlignment(Qt::AlignTop | Qt::AlignLeft);
-        
-    QLabel *instructionLabel = new QLabel(this);
-    instructionLabel->setText("Start by creating a new file !");
-    instructionLabel->setStyleSheet("font: 15pt;");
-    instructionLabel->setAlignment(Qt::AlignTop | Qt::AlignLeft);
-
-    startingTitle->setFixedSize(300, 50);
-    instructionTitle->setFixedSize(300, 30);
-    instructionLabel->setFixedSize(300, 30);
-        
-    window->addWidget(startingTitle);
-    window->addWidget(instructionTitle);
-    window->addWidget(instructionLabel);
-        
+    window->addWidget(startingLabel);
+    
     QFontDatabase::addApplicationFont(":/fonts/SourceCodePro-Regular.ttf");
 }
 
@@ -77,9 +61,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::createTab()
 {
-    delete startingTitle;
-    delete instructionTitle;
-    delete instructionLabel;
+    startingLabel->hide();
     QFrame *tabFrame = new QFrame(this);
     QVBoxLayout *tabsLayout = new QVBoxLayout(tabFrame);
 
