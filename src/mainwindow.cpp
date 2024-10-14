@@ -55,7 +55,11 @@ MainWindow::MainWindow(QWidget *parent)
     QLabel *instructionLabel = new QLabel(this);
     instructionLabel->setText("Start by creating a new file !");
     instructionLabel->setStyleSheet("font: 15pt;");
-
+        
+    window->addWidget(startingTitle);
+    window->addWidget(instructionTitle);
+    window->addWidget(instructionLabel);
+        
     QFontDatabase::addApplicationFont(":/fonts/SourceCodePro-Regular.ttf");
 }
 
