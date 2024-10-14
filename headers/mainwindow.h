@@ -86,8 +86,6 @@ private:
     QTabWidget *tabsWidget = new QTabWidget(this);
     QVBoxLayout *labelsLayout;
 
-    QLabel *startingTitle;
-    QLabel *instructionTitle;
-    QLabel *instructionLabel;
+    QLabel *startingLabel;
 };
 #endif // MAINWINDOW_H
