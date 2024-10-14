@@ -65,7 +65,7 @@ MainWindow::MainWindow(QWidget *parent)
     labelsLayout->addWidget(instructionTitle);
     labelsLayout->addWidget(instructionLabel);
 
-    window->addLayout(labelsLayout);
+    window->setLayout(labelsLayout);
     labelsLayout->setAlignment(Qt::AlignTop | Qt::AlignLeft);
         
     QFontDatabase::addApplicationFont(":/fonts/SourceCodePro-Regular.ttf");
