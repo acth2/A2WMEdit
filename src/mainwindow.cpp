@@ -63,8 +63,7 @@ MainWindow::~MainWindow()
 void MainWindow::createTab()
 {
     if (firstLaunch) {
-        window->removeWidget(startingLabel);
-        startingLabel->deleteLater();
+        startingLabel->hide();
         firstLaunch = false;
     }
     
