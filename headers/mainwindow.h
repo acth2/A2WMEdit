@@ -14,7 +14,6 @@
 #include <QModelIndex>
 #include <QFontMetrics>
 #include <QVBoxLayout>
-#include <QResizeEvent>
 
 #include "headers/linenumberarea.h"
 #include "headers/codeeditor.h"
@@ -32,9 +31,6 @@ public:
     ~MainWindow();
 
     void createTab();
-
-protected:
-    void resizeEvent(QResizeEvent *event) override;
 
 private slots:
 
