@@ -87,5 +87,6 @@ private:
     QVBoxLayout *labelsLayout;
 
     QLabel *startingLabel;
+    bool firstLaunch;
 };
 #endif // MAINWINDOW_H
