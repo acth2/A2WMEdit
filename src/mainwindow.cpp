@@ -47,14 +47,17 @@ MainWindow::MainWindow(QWidget *parent)
     QLabel *startingTitle = new QLabel(this);
     startingTitle->setText("A2WM - Edit");
     startingTitle->setStyleSheet("font: 35pt;");
+    startingTitle->setAlignment(Qt::TopLeftCorner);
 
     QLabel *instructionTitle = new QLabel(this);
     instructionTitle->setText("What should i do to type text ? |");
     instructionTitle->setStyleSheet("font: 10pt;");
+    instructionTitle->setAlignment(Qt::TopLeftCorner);
 
     QLabel *instructionLabel = new QLabel(this);
     instructionLabel->setText("Start by creating a new file !");
     instructionLabel->setStyleSheet("font: 15pt;");
+    instructionLabel->setAlignment(Qt::TopLeftCorner);
         
     window->addWidget(startingTitle);
     window->addWidget(instructionTitle);
