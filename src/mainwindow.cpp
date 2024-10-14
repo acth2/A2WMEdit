@@ -61,7 +61,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::createTab()
 {
-    startingLabel->hide();
+    startingLabel->setText("");
+    startingLabel->setStyleSheet("font: 1pt;");
     QFrame *tabFrame = new QFrame(this);
     QVBoxLayout *tabsLayout = new QVBoxLayout(tabFrame);
 
