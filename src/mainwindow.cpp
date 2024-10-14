@@ -46,7 +46,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QLabel *startingLabel = new QLabel(this);
     startingLabel->setText("Hello and welcome into A2WMEdit. If you are new to start texting you can create a new file by selecting the option on the File section !");
-    startingLabel->setStyleSheet("font: 20pt;");
+    startingLabel->setStyleSheet("font: 10pt;");
     startingLabel->setAlignment(Qt::AlignTop | Qt::AlignLeft);
         
     window->addWidget(startingLabel);
@@ -57,6 +57,16 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::resizeEvent(QResizeEvent *event)
+{
+    QMainWindow::resizeEvent(event);
+    
+    if (startingLabel->isVisible()) {
+        int labelWidth = this->width() - 20;
+        startingLabel->setGeometry(10, 10, labelWidth, startingLabel->height());
+    }
 }
 
 void MainWindow::createTab()
