@@ -44,24 +44,29 @@ MainWindow::MainWindow(QWidget *parent)
     QString menubarStyle = QLatin1String(menubarFile.readAll());
     ui->menubar->setStyleSheet(menubarStyle);
 
+    QVBoxLayout *labelsLayout = new QVBoxLayout();
+    
     QLabel *startingTitle = new QLabel(this);
     startingTitle->setText("A2WM - Edit");
     startingTitle->setStyleSheet("font: 35pt;");
-    startingTitle->setAlignment(Qt::AlignTop | Qt::AlignLeft);
-        
+    startingTitle->setAlignment(Qt::AlignLeft);
+
     QLabel *instructionTitle = new QLabel(this);
-    instructionTitle->setText("What should i do to type text ? |");
+    instructionTitle->setText("What should I do to type text?");
     instructionTitle->setStyleSheet("font: 10pt;");
-    instructionTitle->setAlignment(Qt::AlignTop | Qt::AlignLeft);
-        
+    instructionTitle->setAlignment(Qt::AlignLeft);
+
     QLabel *instructionLabel = new QLabel(this);
-    instructionLabel->setText("Start by creating a new file !");
+    instructionLabel->setText("Start by creating a new file!");
     instructionLabel->setStyleSheet("font: 15pt;");
-    instructionLabel->setAlignment(Qt::AlignTop | Qt::AlignLeft);
-        
-    window->addWidget(startingTitle);
-    window->addWidget(instructionTitle);
-    window->addWidget(instructionLabel);
+    instructionLabel->setAlignment(Qt::AlignLeft);
+
+    labelsLayout->addWidget(startingTitle);
+    labelsLayout->addWidget(instructionTitle);
+    labelsLayout->addWidget(instructionLabel);
+
+    window->addLayout(labelsLayout);
+    labelsLayout->setAlignment(Qt::AlignTop | Qt::AlignLeft);
         
     QFontDatabase::addApplicationFont(":/fonts/SourceCodePro-Regular.ttf");
 }
