@@ -13,6 +13,7 @@
 #include <QTextStream>
 #include <QModelIndex>
 #include <QFontMetrics>
+#include <QVBoxLayout>
 
 #include "headers/linenumberarea.h"
 #include "headers/codeeditor.h"
@@ -83,6 +84,7 @@ private:
     QTreeView *treeView = new QTreeView;
 
     QTabWidget *tabsWidget = new QTabWidget(this);
+    QVBoxLayout *labelsLayout;
 
     QLabel *startingTitle;
     QLabel *instructionTitle;
