@@ -59,7 +59,7 @@ MainWindow::MainWindow(QWidget *parent)
     instructionLabel->setStyleSheet("font: 15pt;");
     instructionLabel->setAlignment(Qt::AlignTop | Qt::AlignLeft);
 
-    startingTitle->setFixedSize(300, 50)
+    startingTitle->setFixedSize(300, 50);
     instructionTitle->setFixedSize(300, 30);
     instructionLabel->setFixedSize(300, 30);
         
