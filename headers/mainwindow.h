@@ -83,5 +83,9 @@ private:
     QTreeView *treeView = new QTreeView;
 
     QTabWidget *tabsWidget = new QTabWidget(this);
+
+    QLabel *startingTitle;
+    QLabel *instructionTitle;
+    QLabel *instructionLabel;
 };
 #endif // MAINWINDOW_H
