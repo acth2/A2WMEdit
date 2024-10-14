@@ -44,6 +44,18 @@ MainWindow::MainWindow(QWidget *parent)
     QString menubarStyle = QLatin1String(menubarFile.readAll());
     ui->menubar->setStyleSheet(menubarStyle);
 
+    QLabel *startingTitle = new QLabel(this);
+    startingTitle->setText("A2WM - Edit");
+    startingTitle->setStyleSheet("font: 35pt;");
+
+    QLabel *instructionTitle = new QLabel(this);
+    instructionTitle->setText("What should i do to type text ? |");
+    instructionTitle->setStyleSheet("font: 10pt;");
+
+    QLabel *instructionLabel = new QLabel(this);
+    instructionLabel->setText("Start by creating a new file !");
+    instructionLabel->setStyleSheet("font: 15pt;");
+
     QFontDatabase::addApplicationFont(":/fonts/SourceCodePro-Regular.ttf");
 }
 
@@ -54,6 +66,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::createTab()
 {
+    delete startingTitle;
+    delete instructionTitle;
+    delete instructionLabel;
     QFrame *tabFrame = new QFrame(this);
     QVBoxLayout *tabsLayout = new QVBoxLayout(tabFrame);
 
