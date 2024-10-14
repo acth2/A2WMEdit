@@ -8,6 +8,7 @@ using namespace std;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , firstLaunch(true)
 {
     ui->setupUi(this);
 
@@ -61,8 +62,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::createTab()
 {
-    startingLabel->setText("");
-    startingLabel->setStyleSheet("font: 1pt;");
+    if (firstLaunch) {
+        window->removeWidget(startingLabel);
+        startingLabel->deleteLater();
+        firstLaunch = false;
+    }
+    
     QFrame *tabFrame = new QFrame(this);
     QVBoxLayout *tabsLayout = new QVBoxLayout(tabFrame);
 
