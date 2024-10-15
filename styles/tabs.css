@@ -21,7 +21,7 @@ QTabBar::tab {
 
 QTabBar::tab:selected {
     background: rgb(40, 44, 52);
-    border-left: 2px solid rgb(82, 139, 255);
+    border-left: 2px solid rgb(17, 17, 17);
     margin-bottom: -1px;
     color: white;
 }
@@ -33,5 +33,5 @@ QTabBar::close-button {
 
 QTabBar::close-button:hover {
     image: url(":/images/close.png");
-    background: rgb(82, 139, 255);
+    background: rgb(100, 0, 0);
 }
