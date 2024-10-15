@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , firstLaunch(true)
+    , startingLabel(new QLabel(this))
 {
     ui->setupUi(this);
 
@@ -45,7 +46,6 @@ MainWindow::MainWindow(QWidget *parent)
     QString menubarStyle = QLatin1String(menubarFile.readAll());
     ui->menubar->setStyleSheet(menubarStyle);
 
-    QLabel *startingLabel = new QLabel(this);
     startingLabel->setText("Hello and welcome into A2WMEdit.\nIf you are new to start texting you can create a new file by selecting the option on the File section !");
     startingLabel->setStyleSheet("font: 10pt;");
     startingLabel->setAlignment(Qt::AlignTop | Qt::AlignLeft);
@@ -62,7 +62,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::createTab()
 {
-    delete startingLabel;
+    if (firstLaunch) {
+        startingLabel->hide();
+        firstLaunch = false;
+    }
     
     QFrame *tabFrame = new QFrame(this);
     QVBoxLayout *tabsLayout = new QVBoxLayout(tabFrame);
