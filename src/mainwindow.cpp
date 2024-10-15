@@ -62,10 +62,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::createTab()
 {
-    if (firstLaunch) {
-        startingLabel->hide();
-        firstLaunch = false;
-    }
+    delete startingLabel;
     
     QFrame *tabFrame = new QFrame(this);
     QVBoxLayout *tabsLayout = new QVBoxLayout(tabFrame);
